@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Roboto, Oxygen, Fira Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  color: #2c3e50;
+  background-color: #DFDBE5;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%232c3e50' fill-opacity='0.44'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+strong,
+.bold {
+  font-weight: 500;
+}
+
+ol,
+p,
+ul {
+  line-height: 1.7;
+}
+
+a {
+  color: #3eaf7c;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.65rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #eaecef;
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+.primary {
+  color: #198754;
+}
+
+
+.btn {
+  color: #198754;
+  position: relative;
+  place-content: center;
+  place-items: center;
+  width: fit-content;
+  border-radius: 99px;
+  letter-spacing: 0.05em;
+  border: 1px solid #198754;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 10px;
+  padding: 0.5rem 1.5rem;
+  white-space: nowrap;
+  font-weight: 700;
+  outline: none;
+  background: #fff;
+  transition: all 0.22s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn:disabled {
+  background: #eee!important;
+  border: #ddd!important;
+  color: #aaa!important;
+  cursor: not-allowed;
+}
+
+.btn:active {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn.primary {
+  background: #198754;
+  color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.pt-5 {
+  padding-top: 5rem;
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.card {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.steps {
+  position: relative;
+}
+
+.steps-list {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.steps-item span {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: .75rem 1rem;
+  font-size: .75rem;
+  background: #cccccc;
+}
+
+.steps-content {
+  margin-bottom: 1rem;
+}
+
+.steps-item.active span, .steps-item.done span {
+  background: #198754;
+  color: white;
+}
+
+.steps-item.active span {
+  font-weight: bold;
+  color: #ffffff;
+}
