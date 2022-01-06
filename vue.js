@@ -1,3 +1,11 @@
+document.body.onload = () => {
+  let preloader = document.getElementById('preloader')
+  setTimeout(() => {
+    if (!preloader.classList.contains('done')) {
+      preloader.classList.add('done')
+    }
+  }, 1500)
+}
 const App = {
   data() {
     return {
@@ -14,7 +22,7 @@ const App = {
   },
   methods: {
     prev() {
-    console.log('prev');
+      if (this.activeIndex !== 0) this.activeIndex--
     },
     reset() {
       this.activeIndex = 0;
@@ -24,16 +32,17 @@ const App = {
       this.activeIndex !== this.steps.length - 1
         ? this.activeIndex++
         : this.resetTest = false
-        console.log(this.activeIndex, this.steps.length - 1);
-        console.log(this.resetTest);
     },
     setActive(idx) {
-      // когда нажимаем на определенный шаг
+     this.activeIndex = idx;
     }
   },
   computed: {
     activeStep() {
       return this.steps[this.activeIndex]
+    },
+    disableBtn() {
+      return this.activeIndex === 0;
     }
     // тут стоит определить несколько свойств:
     // 1. текущий выбранный шаг

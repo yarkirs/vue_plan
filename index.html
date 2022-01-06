@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Основы Vue</title>
-    <link rel="stylesheet" href="theme.css" />
-  </head>
-  <body>
 
-  <div class="container" id="app" v-cloak>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Основы Vue</title>
+  <link rel="stylesheet" href="theme.css" />
+</head>
+
+<body>
+  <div class="preloader" id="preloader">
+		<img src="packman.svg" alt="Loading">
+	</div>
+
+  <div class="container pt-5" id="app" v-cloak>
     <div class="card">
-      <h1>План по изучению Vue.js</h1>
+      <div class="header">
+        <img class="man" src="man.gif" alt="man">
+        <h1>План по изучению Vue.js</h1>
 
+      </div>
       <div class="steps">
         <div class="steps-content">
           {{ activeStep.text }}
         </div>
         <ul class="steps-list">
           <li class="steps-item"
-           v-for="(step, idx) in steps"
-           :class="{
+            v-for="(step, idx) in steps"
+            @click="setActive(idx)"
+            :class="{
              active: activeIndex === idx,
              done: idx < activeIndex
            }"
            :key="step">
             <span>{{ idx + 1 }}</span>
-            {{ step.title }}</li>
+            {{ step.title }}
+          </li>
         </ul>
         <div v-if="resetTest">
-          <button class="btn" @click="prev">Назад</button>
-          <button class="btn primary" @click="nextOfFinish">Вперед</button>
+          <button class="btn" :disabled="disableBtn" @click="prev">Назад</button>
+          <button class="btn primary" @click="nextOfFinish">
+            {{ activeIndex === steps.length - 1 ? 'Закончить' : 'Вперёд' }}
+          </button>
         </div>
         <div v-else>
-          <button class="btn primary" @click="reset">Начать заново</button>
+          <button class="btn primary" @click="reset">Повторить?</button>
         </div>
       </div>
     </div>
@@ -40,5 +52,6 @@
 
   <script src="https://unpkg.com/vue@next"></script>
   <script src="vue.js"></script>
-  </body>
+</body>
+
 </html>

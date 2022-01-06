@@ -105,6 +105,7 @@ h3 {
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+
 .btn.primary {
   background: #198754;
   color: #fff;
@@ -119,10 +120,6 @@ h3 {
   padding-top: 5rem;
 }
 
-.form-control {
-  position: relative;
-  margin-bottom: 0.5rem;
-}
 .card {
   padding: 1rem;
   border-radius: 10px;
@@ -159,8 +156,37 @@ h3 {
   background: #198754;
   color: white;
 }
-
 .steps-item.active span {
   font-weight: bold;
   color: #ffffff;
+}
+.header{
+  display: flex;
+
+}
+.man {
+  margin-left: 5%;
+  width: 100px;
+}
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  z-index: 1001;
+}
+.preloader img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.preloader.done {
+  display: none;
 }
